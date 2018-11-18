@@ -1,6 +1,7 @@
 {
   "files.exclude": {
-    "**/*.bs.js": true
+    "**/*.bs.js": true,
+    "yarn.lock": true
   }
 }
 
