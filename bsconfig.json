@@ -1,0 +1,37 @@
+{
+  "name": "reason-react-example",
+  "reason": {
+    "react-jsx": 2
+  },
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "reason-react",
+    "bs-css",
+    "re-debouncer"
+  ],
+  "refmt": 3,
+  "bsc-flags": [
+    "-warn-error",
+    "@A",
+    "-w",
+    "@A-9-40-42-4",
+    "-bs-no-version-header",
+    "-bs-super-errors",
+    /*
+		* uncomment the bs-g flag to retain metadata
+		* see https://bucklescript.github.io/docs/en/better-data-structures-printing-debug-mode
+		*/
+    //"-bs-g"
+  ]
+}
