@@ -16,7 +16,7 @@ Css.$$global("body", /* :: */[
       ]
     ]);
 
-var Global = /* module */[];
+var Global = { };
 
 export {
   Global ,

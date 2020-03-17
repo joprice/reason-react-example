@@ -45,26 +45,26 @@ var result = Css.style(/* :: */[
       /* [] */0
     ]);
 
-var Styles = /* module */[
-  /* wrapper */wrapper,
-  /* input */input,
-  /* results */results,
-  /* result */result
-];
+var Styles = {
+  wrapper: wrapper,
+  input: input,
+  results: results,
+  result: result
+};
 
 function make(state, search, _children) {
-  return /* record */[
-          /* debugName */components[/* debugName */0],
-          /* reactClassInternal */components[/* reactClassInternal */1],
-          /* handedOffState */components[/* handedOffState */2],
-          /* willReceiveProps */components[/* willReceiveProps */3],
-          /* didMount */components[/* didMount */4],
-          /* didUpdate */components[/* didUpdate */5],
-          /* willUnmount */components[/* willUnmount */6],
-          /* willUpdate */components[/* willUpdate */7],
-          /* shouldUpdate */components[/* shouldUpdate */8],
-          /* render */(function (self) {
-              var onChange = Curry._1(self[/* handle */0], (function ($$event, param) {
+  return {
+          debugName: components.debugName,
+          reactClassInternal: components.reactClassInternal,
+          handedOffState: components.handedOffState,
+          willReceiveProps: components.willReceiveProps,
+          didMount: components.didMount,
+          didUpdate: components.didUpdate,
+          willUnmount: components.willUnmount,
+          willUpdate: components.willUpdate,
+          shouldUpdate: components.shouldUpdate,
+          render: (function (self) {
+              var onChange = Curry._1(self.handle, (function ($$event, param) {
                       return Curry._1(search, Util$ReasonReactExample.formValue($$event));
                     }));
               return React.createElement("div", {
@@ -72,21 +72,21 @@ function make(state, search, _children) {
                         }, React.createElement("input", {
                               className: input,
                               placeholder: "Search",
-                              value: state[/* term */0],
+                              value: state.term,
                               onChange: onChange
                             }), ReactDOMRe.createElementVariadic("div", {
                               className: results
-                            }, Belt_List.toArray(Belt_List.map(state[/* results */1], (function (result$1) {
+                            }, Belt_List.toArray(Belt_List.map(state.results, (function (result$1) {
                                         return React.createElement("div", {
                                                     className: result
                                                   }, Util$ReasonReactExample.str(result$1));
                                       })))));
             }),
-          /* initialState */components[/* initialState */10],
-          /* retainedProps */components[/* retainedProps */11],
-          /* reducer */components[/* reducer */12],
-          /* jsElementWrapped */components[/* jsElementWrapped */13]
-        ];
+          initialState: components.initialState,
+          retainedProps: components.retainedProps,
+          reducer: components.reducer,
+          jsElementWrapped: components.jsElementWrapped
+        };
 }
 
 export {
